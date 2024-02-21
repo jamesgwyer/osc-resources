@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean & Brew booking</title>
+</head>
+<body>
+    <h1>Hey I want to book a restaurant please:</h1>
+    <ul id="dataList"></ul>
+    <form onsubmit="addData(event)">
+        <label for="location">Location: </label>
+        <input type="text" id="locationInput" required><br>
+
+        <label for="amount">Amount of people: </label>
+        <input type="number" id="amountInput" required><br>
+
+        <label for="date">Date: </label>
+        <input type="text" id="dateInput" required><br>
+
+        <input type="submit" value="Add data">
+    </form>
+
+    <script>
+        async function fetchData(){
+            const response = await fetch('/get_data');
+            const data = await response.json();
+
+            const dataList = document.getElementById('dataList');
+            dataList.innerHTML = '';
+
+            data.forEach(row =>{
+                const listItem = document.createElement("li");
+                listItem.textContent = `${row[1]}, ${row[2]}`;
+            });
+        }
+
+        async function addData(event){
+            event.preventDefault();
+
+            const location = document.getElementById('locationInput').value;
+            const amount = document.getElementById('amountInput').value;
+            const date = document.getElementById('dateInput').value;
+
+            await fetch('/add_data', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({location, amount, date}),
+            });
+            fetchData();
+        }
+        fetchData();
+    </script>
+</body>
+</html>
