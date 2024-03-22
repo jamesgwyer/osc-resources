@@ -23,13 +23,13 @@ Proposal needs to include:
 
 > Develop a functional prototype of your digital solution.
 
-**I DO NOT KNOW HOW TO DEVELOP A MOBILE APP, SO HERE'S A WEBSITE** (although you can create an app if you like??)
+I've made a a demo site [here](https://jamesgwyer.github.io/osc-resources/basic-website) with [Bootstrap CSS](https://getbootstrap.com).
 
 ### Getting a database to work
 
 The mark scheme for Task 2 says that students need to "implement front-end and back-end processes using at least two coding languages". Those two languages are (unfortunately) Python and HTML.
 
-Here's an example [REDACTED] made: [db_example](https://github.com/jamesgwyer/osc-resources/tree/main/db_example).
+Here's an example G man made: [db_example](https://github.com/jamesgwyer/osc-resources/tree/main/db_example).
 
 #### Visual Studio Code extensions you need
 
