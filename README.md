@@ -23,7 +23,7 @@ Proposal needs to include:
 
 > Develop a functional prototype of your digital solution.
 
-I've made a a demo site [here](https://jamesgwyer.github.io/osc-resources/basic-website) with [Bootstrap CSS](https://getbootstrap.com).
+I've made a a demo site [here](https://jamesgwyer.github.io/osc-resources/basic-website/bootstrap/index.html) with [Bootstrap CSS](https://getbootstrap.com).
 
 ### Getting a database to work
 
